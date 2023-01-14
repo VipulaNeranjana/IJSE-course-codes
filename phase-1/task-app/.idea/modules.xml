@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/back-end-api/back-end-api.iml" filepath="$PROJECT_DIR$/back-end-api/back-end-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobile-api/mobile-api.iml" filepath="$PROJECT_DIR$/mobile-api/mobile-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/react-api/react-api/react-api.iml" filepath="$PROJECT_DIR$/react-api/react-api/react-api.iml" />
+    </modules>
+  </component>
+</project>
