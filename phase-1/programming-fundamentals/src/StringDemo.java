@@ -42,7 +42,7 @@ public class StringDemo {
         something = "Monday,    Tuesday,Wednesday   , Thursday, Friday    ";
         String[] splits = something.split(",");
         System.out.println(splits[0].trim());
-        System.out.println(splits[1] = splits[1].trim()); // remove white spaces and assign new values to the splits array
+        System.out.println(splits[1] = splits[1].trim()); // remove white2 spaces and assign new values to the splits array
         System.out.println(splits[2].trim());
         System.out.println(splits[3]);  //width wide spaces
         System.out.println(splits[4].trim());
