@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class standeredStream {
     public static void main(String[] args) {
-        System.err.println("error");
+       // System.err.println("error");
         System.out.println("ijse");
 
         System.out.print("type something:");
