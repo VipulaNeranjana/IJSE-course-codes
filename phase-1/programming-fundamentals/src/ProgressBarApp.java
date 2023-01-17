@@ -32,7 +32,7 @@ public class ProgressBarApp {
         for (; canContinue; ) {
             var inputSpeed = scanner.nextInt();
             if (inputSpeed > 3) {
-                System.out.println("Pls enter the correct no (between 1-3)");
+                System.out.print("Pls enter the correct no (between 1-3) :");
                 continue;
             }
             speed = 6 / inputSpeed;
