@@ -106,8 +106,23 @@ public class Loop2 {
         customerList[index-1]= new String[]{id, name, contact};
         index++;
         }
-
-        System.out.println(customerList[1][1]);
+        System.out.println("------------------------------------------------------------");
+        System.out.println("                 ID|               NAME|            contact|");
+        System.out.println("------------------------------------------------------------");
+        int y = 0;
+        while (y++<3){
+            int z = 0;
+            while (z++ < 3){
+                int length = customerList[y-1][z-1].length();
+                int p = 1;
+                String block = "";
+                while (20 - length > p++){
+                    block += " ";
+                }
+                System.out.print(block+customerList[y-1][z-1]+"|");
+            }
+            System.out.print("\n");
+        }
 
     }
 }
