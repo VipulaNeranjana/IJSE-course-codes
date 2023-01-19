@@ -17,7 +17,7 @@ public class MethodDemo2 {
         for (String i:subjects) {
             totalMarks = totalMarks + requestMarks(i);
         }
-        
+
 
         System.out.println("Total marks: " + (totalMarks));
         System.out.println("Total marks: " + (totalMarks)/3.0);
