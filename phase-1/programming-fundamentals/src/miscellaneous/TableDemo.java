@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package miscellaneous;
 
 public class TableDemo {
     public static void main(String[] args) {
@@ -14,8 +14,6 @@ public class TableDemo {
         printTable(coloumnNames,data);
     }
     public static void printTable(String[] columnNames,String[][] data ){
-        int noOfRows = data.length;
-        int noOfColumns =  data[1].length;
         int[] maxLengthArray = findMaxLengths(columnNames,data);
 
         String line1 = "";
