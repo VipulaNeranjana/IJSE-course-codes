@@ -8,23 +8,19 @@ public class RecursionDemo1 {
     }
 
     public static void printStar(int x, int y) {
-        int xNumber = x;
         int xNumber2 = 0;
         if ((y != 0) ){
-            if(y!=0 && xNumber==0){
+            if(x==0){
                 System.out.println("");
                 y--;
-                System.out.println(y);
-                xNumber = x;
-                System.out.println(xNumber2);
-                printStar(xNumber,y);
+                printStar(x,y);
             }
             System.out.print("*");
-            xNumber--;
+            x--;
             xNumber2++;
-            printStar(xNumber, y);
+            printStar(x, y);
 
         };
-        if(y==0 && xNumber==0) return;
+        if(y==0 && x==0) return;
     }
 }

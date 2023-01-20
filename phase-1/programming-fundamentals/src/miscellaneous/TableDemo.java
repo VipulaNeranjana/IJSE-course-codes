@@ -52,6 +52,7 @@ public class TableDemo {
                     maxLengthArray[i] = maxLength;
                 }
             }
+            if(maxLength< columnNames[i].length()) maxLengthArray[i] = columnNames[i].length();
         }
         return maxLengthArray;
     }
