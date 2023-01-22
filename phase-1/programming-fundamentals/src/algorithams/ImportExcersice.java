@@ -40,12 +40,12 @@ public class ImportExcersice {
 
         int unNullCount = 0;
         for (String num:countArray) {
-            if (!(num==null)) unNullCount++;
+            if (!(num==null) && !(num.equals("1"))) unNullCount++;
         }
 
         String[][] finalArray = new String[unNullCount][2];
         for (int i = 0,j=0; i < countArray.length; i++) {
-            if(countArray[i]!= null){
+            if(countArray[i]!= null && !countArray[i].equals("1")){
                 finalArray[j][1] = countArray[i];
                 finalArray[j][0] = letterArray[i];
                 j++;
