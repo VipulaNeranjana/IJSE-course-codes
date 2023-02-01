@@ -22,7 +22,7 @@ class Employee {
         System.out.println("Employee Constructor 1");
     }
 
-    public Employee(int id, String name, Spouse spouse) {   // All Args Constructor
+    public Employee(int id, String name, Spouse spouse) {   // All Args Constructorm
         this.id = id;
         this.name = name;
         this.spouse = spouse;
