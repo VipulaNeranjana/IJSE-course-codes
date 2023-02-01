@@ -9,9 +9,19 @@ public class Exercise4 {
 }
 
 class Teacher{
-    int nic;
+    String nic;
     String name;
     String contact;
+
+    public Teacher(String nic, String name, String contact){
+        this.nic = nic;
+        this.name = name;
+        this.contact = contact;
+    }
+
+    public Teacher() {
+
+    }
 
     void printDetails(){
         System.out.printf("nic=%s , name = %s , contact = %s", nic,name,contact);
