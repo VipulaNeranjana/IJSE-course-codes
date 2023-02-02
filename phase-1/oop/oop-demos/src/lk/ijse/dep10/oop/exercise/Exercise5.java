@@ -25,6 +25,7 @@ public class Exercise5 {
     public static void main(String[] args) {
         for (Course course : courses) {
             System.out.println(course.id + " : " +  course.coordinator);
+            
         }
     }
 }
