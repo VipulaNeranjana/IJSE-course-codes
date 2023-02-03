@@ -12,6 +12,10 @@ public class Inheritance {
 class Vehicle{
     String registationNumber;
 
+    {
+        System.out.println("vehicle object is initializing");
+    }
+
     static {
         System.out.println("vehicle class is initialized");
     }
@@ -19,6 +23,10 @@ class Vehicle{
         System.out.println("Vehicle constructor");
     }
     void printRegistationNumber(){
+        printInternal();
+    }
+
+    private void printInternal(){
         System.out.println(registationNumber);
     }
 }
