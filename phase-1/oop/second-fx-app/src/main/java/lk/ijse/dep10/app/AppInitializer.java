@@ -27,7 +27,6 @@ public class AppInitializer extends Application {
 //        hBoxDemo();
 //        vBoxDemo();
 //        gridPainDemo();
-        anchorPaneDemo();
 
         Button btn1 = new Button("Button 1");
         Button btn2 = new Button("Button 2");
@@ -117,68 +116,7 @@ public class AppInitializer extends Application {
         stage.centerOnScreen();
     }
 
-<<<<<<< HEAD
-    private void anchorPaneDemo(){
-        Stage stage = new Stage();
 
-        Button btn1 = new Button("btn1");
-        Button btn2 = new Button("btn2");
-        Button btn3 = new Button("btn3");
-        Button btn4 = new Button("btn4");
-
-        AnchorPane anchorPane = new AnchorPane();
-        Scene scene = new Scene(anchorPane);
-
-
-        Hyperlink signOutLink = new Hyperlink("Sign Out");
-        anchorPane.getChildren().add(signOutLink);
-        AnchorPane.setTopAnchor(signOutLink, 10.0d);
-        AnchorPane.setRightAnchor(signOutLink,10.0d);
-
-        var hBox = hBoxInAnchorPane();
-        anchorPane.getChildren().add(hBox);
-        AnchorPane.setBottomAnchor(hBox,10.0d);
-        AnchorPane.setRightAnchor(hBox,10.0d);
-
-        Label label1 = new Label("Programme Status");
-        AnchorPane.setBottomAnchor(label1, 10.0d);
-        AnchorPane.setLeftAnchor(label1, 10.0d);
-        anchorPane.getChildren().add(label1);
-
-        TextArea textArea = new TextArea();
-        anchorPane.getChildren().add(textArea);
-        AnchorPane.setLeftAnchor(textArea, 10.0d);
-        AnchorPane.setRightAnchor(textArea,10.0d);
-        AnchorPane.setBottomAnchor(textArea, 35.0d);
-        AnchorPane.setTopAnchor(textArea,35.0d);
-
-        stage.setScene(scene);
-
-
-
-        stage.setTitle("anchorPaneDemo");
-        stage.setHeight(250);
-        stage.setWidth(250);
-        stage.show();
-    }
-
-    private HBox hBoxInAnchorPane(){
-        Circle circle = new Circle();
-        circle.setFill(Color.GREEN);
-        circle.setRadius(10);
-
-        Label label1 = new Label("Connection");
-
-        HBox hBox = new HBox();
-        hBox.setSpacing(10.0d);
-        hBox.setAlignment(Pos.BOTTOM_RIGHT);
-        hBox.getChildren().addAll(circle,label1);
-
-        return hBox;
-    }
-=======
-
->>>>>>> 76b020ebad3c6e37f71671706fb3319f4e412531
 
     private void gridPainDemo(){
         Stage stage = new Stage();
