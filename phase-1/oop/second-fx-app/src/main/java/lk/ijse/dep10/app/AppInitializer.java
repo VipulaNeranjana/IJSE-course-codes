@@ -27,7 +27,6 @@ public class AppInitializer extends Application {
 //        hBoxDemo();
 //        vBoxDemo();
 //        gridPainDemo();
-        anchorPaneDemo();
 
         Button btn1 = new Button("Button 1");
         Button btn2 = new Button("Button 2");
