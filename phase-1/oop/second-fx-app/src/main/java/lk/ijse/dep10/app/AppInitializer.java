@@ -117,6 +117,7 @@ public class AppInitializer extends Application {
         stage.centerOnScreen();
     }
 
+<<<<<<< HEAD
     private void anchorPaneDemo(){
         Stage stage = new Stage();
 
@@ -175,6 +176,9 @@ public class AppInitializer extends Application {
 
         return hBox;
     }
+=======
+
+>>>>>>> 76b020ebad3c6e37f71671706fb3319f4e412531
 
     private void gridPainDemo(){
         Stage stage = new Stage();
