@@ -158,6 +158,10 @@ public class AppInitializer extends Application {
             if(!isNameValid) nameText.selectAll();
             if(!isNicValid) nicText.selectAll();
             if(!isContactValid) contactText.selectAll();
+
+            if(isContactValid && isIdValid && isNameValid && isNicValid){
+                successScene(stage);
+            }
         });
 
         stage.setScene(scene);
@@ -210,5 +214,21 @@ public class AppInitializer extends Application {
             if(!Character.isDigit(contactChar[i])) return false;
         }
         return true;
+    }
+
+    public void successScene(Stage stage){
+        Label label = new Label("Success!!");
+        AnchorPane anchorPane = new AnchorPane(label);
+        Scene scene = new Scene(anchorPane);
+
+        anchorPane.setMinWidth(400);
+        anchorPane.setMinHeight(600);
+        label.setAlignment(Pos.CENTER);
+        label.setFont(new Font(20));
+        stage.centerOnScreen();
+        stage.setScene(scene);
+        stage.show();
+
+
     }
 }
