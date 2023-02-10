@@ -57,10 +57,10 @@ public class AppInitializer extends Application {
         vBox.setAlignment(Pos.CENTER);
         logInLabel.setFont(new Font(40));
         logInLabel.setTextFill(Color.DARKBLUE);
-        logInLabel.setPadding(new Insets(0,0,40,0));
+        logInLabel.setPadding(new Insets(0, 0, 40, 0));
         button.setDefaultButton(true);
         passwordField.setMaxWidth(250);
-        statusLabel.setTextFill(Color.rgb(200,2,2,1));
+        statusLabel.setTextFill(Color.rgb(200, 2, 2, 1));
         statusLabel.setVisible(false);
         button.setOnAction(actionEvent -> {
             if (passwordField.getText().equals("Admin")) mainScene(stage);
@@ -77,41 +77,41 @@ public class AppInitializer extends Application {
 
     }
 
-    public void mainScene(Stage stage){
+    public void mainScene(Stage stage) {
         Label label = new Label("Welcome to the App");
         Label lbl = new Label("Hi! i'm moving");
         Label lblDinamic = new Label("");
         ArrayList<String> arrDinamic = new ArrayList<String>();
         String[] arrSentences = new String[]{
-          "I am vipula and I know it",
-          "I am hungry now",
-          "There is nothing to shy"
+                "I am vipula and I know it",
+                "I am hungry now",
+                "There is nothing to shy"
         };
         String block = String.format("\u001b");
         Sphere sphere = new Sphere();
 
 
-        Rectangle2D rectangle2D = new Rectangle2D(1,1,1,1);
+        Rectangle2D rectangle2D = new Rectangle2D(1, 1, 1, 1);
 
         label.setFont(new Font(30));
 
-        KeyFrame key1 = new KeyFrame(Duration.millis(0),actionEvent -> {
+        KeyFrame key1 = new KeyFrame(Duration.millis(0), actionEvent -> {
             TranslateTransition translateX = new TranslateTransition(Duration.seconds(1), label);
             translateX.setFromX(-500);
             translateX.setToX(20);
             translateX.play();
         });
-        KeyFrame key2 =  new KeyFrame(Duration.millis(1000),actionEvent -> {
-            TranslateTransition translate1X =  new TranslateTransition(Duration.millis(1000),label);
+        KeyFrame key2 = new KeyFrame(Duration.millis(1000), actionEvent -> {
+            TranslateTransition translate1X = new TranslateTransition(Duration.millis(1000), label);
             translate1X.setFromX(20);
             translate1X.setToX(0);
             translate1X.play();
         });
-        KeyFrame key3 = new KeyFrame(Duration.millis(2000),actionEvent -> {
+        KeyFrame key3 = new KeyFrame(Duration.millis(2000), actionEvent -> {
             label.setScaleX(2);
             label.setScaleY(2);
         });
-        KeyFrame key4 = new KeyFrame(Duration.millis(2500),actionEvent -> {
+        KeyFrame key4 = new KeyFrame(Duration.millis(2500), actionEvent -> {
             label.setScaleX(1);
             label.setScaleY(1);
         });
@@ -126,8 +126,8 @@ public class AppInitializer extends Application {
                 arrDinamic.add(string1 + block);
 
                 System.out.println(lblDinamic.getText());
-                if (j == chars.length-1){
-                    for (int k = chars.length-1; k >= 0 ; k--) {
+                if (j == chars.length - 1) {
+                    for (int k = chars.length - 1; k >= 0; k--) {
                         String string = "";
                         for (int l = 0; l < k; l++) {
                             string = string + chars[l];
@@ -145,15 +145,15 @@ public class AppInitializer extends Application {
         }
 
 
-        Timeline timeline = new Timeline(key1,key2,key3,key4);
+        Timeline timeline = new Timeline(key1, key2, key3, key4);
         timeline.setCycleCount(1);
         timeline.play();
 
-        KeyFrame key5 = new KeyFrame(Duration.seconds(0.2),actionEvent -> {
+        KeyFrame key5 = new KeyFrame(Duration.seconds(0.2), actionEvent -> {
 
             lblDinamic.setText(arrDinamic.get(i));
             i++;
-            if(i == arrDinamic.size() -1) i = 0;
+            if (i == arrDinamic.size() - 1) i = 0;
 //            for (int i = 0; i < arrSentences.length; i++) {
 //                String string1 = "";
 //                char[] chars = arrSentences[i].toCharArray();
@@ -186,7 +186,7 @@ public class AppInitializer extends Application {
 //            }
         });
         VBox vBox = new VBox(label);
-        AnchorPane anchorPane = new AnchorPane(vBox,lbl,lblDinamic);
+        AnchorPane anchorPane = new AnchorPane(vBox, lbl, lblDinamic);
         Timeline timeline1 = new Timeline(key5);
         timeline1.setCycleCount(Animation.INDEFINITE);
         timeline1.playFromStart();
@@ -217,7 +217,7 @@ public class AppInitializer extends Application {
         vBox.setMinWidth(800);
         vBox.setMinHeight(600);
         vBox.setAlignment(Pos.CENTER);
-        label.setTextFill(Color.rgb(0,100,250,0.3));
+        label.setTextFill(Color.rgb(0, 100, 250, 0.3));
 
         stage.setScene(scene);
         stage.centerOnScreen();
