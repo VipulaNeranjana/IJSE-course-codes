@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.app.controls.MainFormControl">
+   <children>
+      <Canvas fx:id="cnvMain" height="457.0" layoutX="-26.0" layoutY="-37.0" onMouseDragged="#cnvOnMouseDragged" onMousePressed="#onCnvPressed" onMouseReleased="#onnvReleased" width="684.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ToolBar prefHeight="40.0" prefWidth="651.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+            <Label text="fill" />
+            <ColorPicker fx:id="clrFill" onAction="#clrFillOnAction" />
+            <Label text="strock" />
+            <ColorPicker fx:id="clrStrock" onAction="#clrStrockOnAction" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
