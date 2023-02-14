@@ -1,0 +1,28 @@
+#btnRemove,#btnDelete {
+    -fx-background-color: darkRed;
+    -fx-font-weight: 200;
+}
+#btnRemove:hover,#btnDelete:hover {
+    -fx-background-color: #dc2525;
+    -fx-cursor: hand;
+}
+#lstNames{
+    -fx-font-size: 16px;
+}
+
+#btnAdd,#btnNew{
+    -fx-background-color: green;
+}
+#btnAdd:hover,#btnNew:hover{
+    -fx-background-color: rgba(0, 128, 0, 0.53);
+}
+#btnSave{
+    -fx-background-color: #6d6dec;
+}
+.invalid{
+    -fx-text-box-border: red;
+    -fx-focus-color: red;
+    /*-fx-border-radius: 20px;*/
+    /*-fx-border-color: red;*/
+    /*-fx-border-width: 2px;*/
+}
