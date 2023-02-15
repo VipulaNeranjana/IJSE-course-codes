@@ -28,8 +28,20 @@ public class MainFormController {
     private Button btnTableView;
 
     @FXML
-    void btnComboBoxOnAction(ActionEvent event) {
+    void btnComboBoxOnAction(ActionEvent event) throws IOException {
 
+        AnchorPane pane  = new FXMLLoader(getClass().getResource("/view/ComboBoxScene.fxml")).load();
+
+
+        Scene scene = new Scene(pane);
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(btnComboBox.getScene().getWindow());
+        stage.setTitle("combo box demo");
+        stage.show();
+        stage.centerOnScreen();
     }
 
     @FXML

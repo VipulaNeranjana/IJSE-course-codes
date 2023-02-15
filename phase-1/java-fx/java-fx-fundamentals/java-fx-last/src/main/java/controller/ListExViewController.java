@@ -302,9 +302,14 @@ public class ListExViewController {
 
         if(!isValid) return;
 
+        StudentInfo selectedStudent = lstStudent.getSelectionModel().getSelectedItem();
+
         ObservableList<StudentInfo> studentList = lstStudent.getItems();
         for(StudentInfo student : studentList){
             for(String number : student.contacts){
+
+                if(student == selectedStudent) continue;
+
                 if(isDuplicate(contact)){
                     new Alert(Alert.AlertType.ERROR, String.format("the %s number already exist", contact)).showAndWait();
                     lstContact.getStyleClass().add("invalid");
@@ -314,8 +319,20 @@ public class ListExViewController {
             }
         }
 
-        StudentInfo student = new StudentInfo(txtId.getText(), txtName.getText(), rdoMale.isSelected() ? Gender.MALE : Gender.FEMALE, new ArrayList<>(lstContact.getItems()), new ArrayList<>(lstSelectedModule.getItems()));
-        studentList.add(student);
+        if(selectedStudent == null){
+            StudentInfo student = new StudentInfo(txtId.getText(), txtName.getText(), rdoMale.isSelected() ? Gender.MALE : Gender.FEMALE, new ArrayList<>(lstContact.getItems()), new ArrayList<>(lstSelectedModule.getItems()));
+            studentList.add(student);
+
+        }
+        else {
+            selectedStudent.name =  txtName.getText().strip();
+            selectedStudent.gender = rdoMale.isSelected() ? Gender.MALE : Gender.FEMALE;
+            selectedStudent.contacts.clear();
+            selectedStudent.contacts.addAll(new ArrayList<>(lstContact.getItems()));
+            selectedStudent.modules.clear();
+            selectedStudent.modules.addAll(new ArrayList<>(lstSelectedModule.getItems()));
+
+        }
         btnNewStudent.fire();
     }
 
