@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="912.0" prefWidth="670.0" stylesheets="@../css/StyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainFormController">
    <children>
       <Label layoutX="210.0" layoutY="34.0" text="New Student" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="209.0">
@@ -17,7 +16,7 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <VBox layoutX="39.0" layoutY="79.0" prefHeight="86.0" prefWidth="386.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="245.0">
+      <VBox layoutX="39.0" layoutY="79.0" prefHeight="86.0" prefWidth="400.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="245.0">
          <children>
             <HBox prefHeight="26.0" prefWidth="301.0" spacing="10.0">
                <children>
@@ -26,7 +25,7 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtId" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="202.0" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtId" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="202.0" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox prefHeight="26.0" prefWidth="301.0" spacing="10.0">
@@ -36,7 +35,7 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtName" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="202.0" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtName" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="202.0" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox prefHeight="26.0" prefWidth="301.0" spacing="10.0">
@@ -46,33 +45,34 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtContact" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="202.0" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtContact" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="202.0" style="-fx-background-radius: 20;" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </children>
       </VBox>
-      <ListView fx:id="lstContacts" layoutX="176.0" layoutY="165.0" prefHeight="200.0" prefWidth="247.0" />
-      <ListView fx:id="lstAllModuls" layoutX="176.0" layoutY="393.0" prefHeight="200.0" prefWidth="200.0" />
-      <ListView fx:id="lstSelectedModules" layoutX="425.0" layoutY="393.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="86.0" layoutY="393.0" text="Modules">
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <ListView fx:id="lstContacts" layoutX="176.0" layoutY="165.0" prefHeight="200.0" prefWidth="247.0" style="-fx-background-radius: 20;" />
+      <ListView fx:id="lstAllModuls" layoutX="176.0" layoutY="393.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 20;" />
+      <ListView fx:id="lstSelectedModules" layoutX="425.0" layoutY="393.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="86.0" layoutY="393.0" text="Modules" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="517.0">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnAllModulesToSelected" layoutX="385.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnAllModulesToSelectedOnAction" text="&gt;">
+      <Button fx:id="btnAllModulesToSelected" layoutX="385.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnAllModulesToSelectedOnAction" style="-fx-background-radius: 20;" text="&gt;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="btnSelectedToAllModules" layoutX="385.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnSelectedToAllModulesOnAction" text="&lt;">
+      <Button fx:id="btnSelectedToAllModules" layoutX="385.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnSelectedToAllModulesOnAction" style="-fx-background-radius: 20;" text="&lt;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="btnSave" layoutX="232.0" layoutY="631.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="SAVE" />
-      <Button fx:id="btnDelete" layoutX="359.0" layoutY="631.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete" />
-      <ListView fx:id="lstStudents" layoutX="176.0" layoutY="678.0" prefHeight="200.0" prefWidth="448.0" />
-      <Button fx:id="btnAdd" layoutX="439.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddOnAction" text="add" />
-      <Button fx:id="btnRemove" layoutX="440.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnRemove" text="Remove" />
+      <Button fx:id="btnSave" layoutX="232.0" layoutY="631.0" mnemonicParsing="false" onAction="#btnSaveOnAction" style="-fx-background-radius: 20;" text="SAVE" />
+      <Button fx:id="btnDelete" layoutX="359.0" layoutY="631.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" style="-fx-background-radius: 20;" text="Delete" />
+      <ListView fx:id="lstStudents" layoutX="176.0" layoutY="678.0" prefHeight="200.0" prefWidth="448.0" style="-fx-background-radius: 20;" />
+      <Button fx:id="btnAdd" layoutX="439.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-radius: 20;" text="add" />
+      <Button fx:id="btnRemove" layoutX="440.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnRemove" style="-fx-background-radius: 20;" text="Remove" />
    </children>
 </AnchorPane>

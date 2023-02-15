@@ -139,6 +139,10 @@ public class MainFormController {
 
         if(canDelete.isEmpty() || canDelete.get() == ButtonType.NO) return;
         if(canDelete.get() == ButtonType.YES) {
+            if(id<1000) idString = String.format("%03d",id);
+            else if (id>1000) idString = String.format("%s",id);
+            txtId.setText(idString);
+
             lstStudents.getItems().remove(index);
 
             moduleCount = 0;
@@ -152,9 +156,7 @@ public class MainFormController {
 
             txtName.requestFocus();
 
-            if(id<1000) idString = String.format("%03d",id);
-            else if (id>1000) idString = String.format("%s",id);
-            txtId.setText(idString);
+
         }
 
     }
@@ -170,6 +172,7 @@ public class MainFormController {
             isValid = false;
             lstAllModuls.requestFocus();
             lstAllModuls.getStyleClass().add("invalid");
+            return;
         }
 
 
@@ -177,6 +180,7 @@ public class MainFormController {
             isValid = false;
             txtContact.requestFocus();
             txtContact.getStyleClass().add("invalid");
+            return;
         }
 
         if(!isValidName(txtName.getText())){
@@ -184,6 +188,7 @@ public class MainFormController {
             txtName.selectAll();
             txtName.getStyleClass().add("invalid");
             isValid =false;
+            return;
         }
 
         if(!isValid) return;
@@ -235,6 +240,7 @@ public class MainFormController {
         for(char c : name.toCharArray()){
             if(Character.isDigit(c)) return false;
         }
+        isValid =true;
         return true;
     }
 
@@ -251,6 +257,7 @@ public class MainFormController {
             if(!Character.isDigit(c)) return false;
             i++;
         }
+        isValid = true;
         return true;
     }
 

@@ -2,3 +2,35 @@
     -fx-text-box-border: red;
     -fx-focus-color: red;
 }
+
+#btnAdd{
+    -fx-background-color: #064206;
+    -fx-text-fill: white;
+}
+#btnAdd:hover{
+    -fx-background-color: #217221;
+}
+
+#btnRemove{
+    -fx-background-color: #960808;
+    -fx-text-fill: white;
+}
+#btnRemove:hover{
+    -fx-background-color: #da2323;
+}
+
+#btnSave{
+    -fx-background-color: #1a1abe;
+    -fx-text-fill: white;
+}
+#btnSave:hover{
+    -fx-background-color: #3838c0;
+}
+
+#btnDelete{
+    -fx-background-color: #960808;
+    -fx-text-fill: white;
+}
+#btnDelete:hover{
+    -fx-background-color: #da2323;
+}
