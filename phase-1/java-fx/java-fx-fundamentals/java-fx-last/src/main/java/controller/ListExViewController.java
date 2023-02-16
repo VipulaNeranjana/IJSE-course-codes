@@ -206,7 +206,7 @@ public class ListExViewController {
 
     @FXML
     void btnNewStudentOnAction(ActionEvent event) {
-        txtId.setText(generateNewStudentId());
+        txtId.setText(generateNewStudentId());     //--------------------------------------
 
         lblGender.setTextFill(Color.BLACK);
         txtContact.getStyleClass().remove("invalid");
@@ -229,7 +229,7 @@ public class ListExViewController {
         txtContact.clear();
         rdoFemale.getToggleGroup().selectToggle(null);
 
-        ObservableList<String> moduleList = lstModules.getItems();
+        ObservableList<String> moduleList = lstModules.getItems();  //-----------------------------------
         moduleList.clear();
         moduleList.addAll("Object Oriented Programming", "Programming Fundamentals","Mongo DB","REACT","Database Management System","Docker","Angular");
 

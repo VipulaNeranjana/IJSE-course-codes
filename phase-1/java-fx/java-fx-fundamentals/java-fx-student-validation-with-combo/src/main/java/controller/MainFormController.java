@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +11,12 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
+import model.Modules;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 
 public class MainFormController {
 
@@ -38,7 +45,7 @@ public class MainFormController {
     private CheckBox chkPartTime;
 
     @FXML
-    private ComboBox<?> cmbDegree;
+    private ComboBox<Modules> cmbDegree;
 
     @FXML
     private Label lblGender;
@@ -70,6 +77,7 @@ public class MainFormController {
     @FXML
     private TextField txtName;
 
+
     @FXML
     void btnAddOnAction(ActionEvent event) {
 
@@ -92,7 +100,43 @@ public class MainFormController {
 
     @FXML
     void btnNewStudentOnAction(ActionEvent event) {
-        
+
+
+        lblGender.setTextFill(Color.BLACK);
+        txtContact.getStyleClass().remove("invalid");
+        txtName.getStyleClass().remove("invalid");
+        lstContact.getStyleClass().remove("invalid");
+        lstSelectedModule.getStyleClass().remove("invalid");
+
+
+        txtName.setDisable(false);
+        txtContact.setDisable(false);
+        btnAdd.setDisable(false);
+        rdoMale.setDisable(false);
+        rdoFemale.setDisable(false);
+        btnSave.setDisable(false);
+
+        lstStudent.getSelectionModel().clearSelection();
+        lstContact.getSelectionModel().clearSelection();
+        lstSelectedModule.getSelectionModel().clearSelection();
+
+        txtName.clear();
+        txtContact.clear();
+        rdoMale.getToggleGroup().selectToggle(null);
+
+        lstSelectedModule.getItems().clear();
+
+        ArrayList<String> seSubjects = new ArrayList<>(Arrays.asList("java", "angular", "react"));
+        Modules se = new Modules("SE", seSubjects);
+
+        ArrayList<String> meSubjects = new ArrayList<>(Arrays.asList("manufacturing", "thermodynamics", "fluid"));
+        Modules me = new Modules("ME", meSubjects);
+
+        ObservableList<Modules> degreeList = cmbDegree.getItems();
+        degreeList.clear();
+        degreeList.addAll(se,me);
+
+
 
     }
 
