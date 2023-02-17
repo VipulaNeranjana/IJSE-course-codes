@@ -1,0 +1,6 @@
+.invalid{
+    -fx-border-color: red;
+}
+.warning{
+    -fx-text-fill: red;
+}

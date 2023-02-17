@@ -116,8 +116,9 @@ public class TableViewScenenController {
             }
         }
 
+        Employee selectedItems = tblEmployees.getSelectionModel().getSelectedItem();
         for (Employee employee : tblEmployees.getItems()) {
-//            if(selectedItems != null)return;
+            if(selectedItems != null)break;
             if(employee.getId().equals(id)){
                 txtId.selectAll();
                 txtId.requestFocus();
@@ -125,7 +126,6 @@ public class TableViewScenenController {
             }
         }
 
-        Employee selectedItems = tblEmployees.getSelectionModel().getSelectedItem();
         if(selectedItems == null){
             Employee employee = new Employee(id, name, address);
             tblEmployees.getItems().add(employee);
@@ -135,6 +135,7 @@ public class TableViewScenenController {
             selectedItems.setId(txtId.getText());
             selectedItems.setName(txtName.getText());
             selectedItems.setAddress(txtAdress.getText());
+            tblEmployees.refresh();
         }
         btnNEw.fire();
     }
