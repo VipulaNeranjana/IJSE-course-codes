@@ -279,6 +279,7 @@ public class MainFormController {
 
         lstContact.getSelectionModel().clearSelection();
         lstSelectedModule.getSelectionModel().clearSelection();
+        tblStudent.getSelectionModel().clearSelection();
 
         txtName.clear();
         txtContact.clear();

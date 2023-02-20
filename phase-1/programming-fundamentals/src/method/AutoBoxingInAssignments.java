@@ -1,6 +1,6 @@
 package method;
 
-public class BoxingVsUnBoxing {
+public class AutoBoxingInAssignments {
     public static void main(String[] args) {
         Integer myint = new Integer(10);
         int x = 10;
