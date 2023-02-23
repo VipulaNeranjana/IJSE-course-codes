@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="145.0" prefHeight="100.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.malware.controller.SpalshViewController">
+   <children>
+      <ProgressBar fx:id="pgb" layoutX="20.0" layoutY="46.0" prefHeight="20.0" prefWidth="561.0" progress="0.0" />
+      <Label layoutX="252.0" layoutY="20.0" text="App is Loading" />
+   </children>
+</AnchorPane>
