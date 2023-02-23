@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.controller.MainViewController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnResetOnAction" text="Reset" />
+            <Button fx:id="btnSelectFile" layoutX="10.0" layoutY="10.0" minWidth="136.0" mnemonicParsing="false" onAction="#btnSelectFileOnAction" text="Select file" />
+            <TextField fx:id="txtSelectFile" editable="false" />
+            <Button fx:id="btnSelectDestination" layoutX="10.0" layoutY="34.0" minWidth="136.0" mnemonicParsing="false" onAction="#btnSelectDestinationOnAction" text="Select destination" />
+            <TextField fx:id="txtFileDestination" editable="false" layoutX="10.0" layoutY="58.0" />
+            <VBox alignment="CENTER" prefHeight="49.0" prefWidth="580.0">
+               <children>
+                  <Button fx:id="btnCopy" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#btnCopyOnAction" text="copy" />
+               </children>
+            </VBox>
+            <ProgressBar fx:id="prbCopying" maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="0.0" VBox.vgrow="ALWAYS" />
+            <VBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="580.0">
+               <children>
+                  <Label fx:id="lblPercentage" text="percentage %" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
