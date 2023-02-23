@@ -77,11 +77,10 @@ public class MainViewController {
             }
         };
 
-        new Thread(task).start();
-
         prbCopying.progressProperty().bind(task.progressProperty());
         lblPercentage.textProperty().bind(task.messageProperty());
-        System.out.println("done");
+        new Thread(task).start();
+
     }
 
     @FXML
