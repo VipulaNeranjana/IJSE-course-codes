@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.serialization.controller.StudentListViewController">
+   <children>
+      <Button fx:id="btnNewStudent" layoutX="41.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnNewStudentOnAction" style="-fx-background-color: green;" text="+ New Student" />
+      <VBox layoutX="41.0" layoutY="77.0" prefHeight="369.0" prefWidth="518.0" spacing="5.0">
+         <children>
+            <Label text="ID" />
+            <TextField fx:id="txtId" disable="true" promptText="Enter your id" />
+            <Label layoutX="10.0" layoutY="10.0" text="NAME" />
+            <TextField fx:id="txtName" disable="true" layoutX="10.0" layoutY="26.0" promptText="Enter your name" />
+            <Label layoutX="10.0" layoutY="50.0" text="ADDRESS" />
+            <TextField fx:id="txtAddress" disable="true" layoutX="10.0" layoutY="66.0" promptText="Enter your address" />
+            <HBox prefHeight="42.0" prefWidth="518.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btnSave" disable="true" minWidth="80.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefWidth="80.0" style="-fx-background-color: blue;" text="Save" />
+                  <Button fx:id="btnDelete" disable="true" layoutX="10.0" layoutY="10.0" minWidth="80.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="80.0" style="-fx-background-color: red;" text="Delete" />
+               </children>
+            </HBox>
+            <TableView fx:id="tblStudents" prefHeight="202.0" prefWidth="518.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="id" />
+                <TableColumn prefWidth="122.0" text="name" />
+                  <TableColumn prefWidth="320.0" text="address" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

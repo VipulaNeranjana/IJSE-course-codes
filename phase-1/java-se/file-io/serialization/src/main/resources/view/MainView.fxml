@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="201.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.serialization.controller.MainViewController">
    <children>
       <Label layoutX="154.0" layoutY="25.0" text="Java Serialization in Action">
@@ -18,6 +17,7 @@
          <children>
             <Button fx:id="btnHelloSerialization" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHelloSerializationOnAction" prefHeight="30.0" text="Hello Serilaization" VBox.vgrow="ALWAYS" />
             <Button fx:id="btnManageStudent" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnManageStudentOnAction" prefHeight="30.0" text="Manage Student" VBox.vgrow="ALWAYS" />
+            <Button fx:id="btnStudentListing" layoutX="10.0" layoutY="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnStudentListingOnAction" prefHeight="30.0" text="Manage Student by Listing" />
          </children>
       </VBox>
    </children>

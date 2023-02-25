@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class MainViewController {
 
+    public Button btnStudentListing;
     @FXML
     private Button btnHelloSerialization;
 
@@ -35,4 +36,11 @@ public class MainViewController {
         stage.setTitle("Manage Student");
     }
 
+    public void btnStudentListingOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(new FXMLLoader(getClass().getResource("/view/StudentListView.fxml")).load()));
+        stage.show();
+        stage.centerOnScreen();
+        stage.setTitle("Manage Student List");
+    }
 }
