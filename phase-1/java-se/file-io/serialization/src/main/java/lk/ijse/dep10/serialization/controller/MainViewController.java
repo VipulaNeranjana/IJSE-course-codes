@@ -43,4 +43,12 @@ public class MainViewController {
         stage.centerOnScreen();
         stage.setTitle("Manage Student List");
     }
+
+    public void btnSerializationWithInheritanceOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(new FXMLLoader(getClass().getResource("/view/InheritanceView.fxml")).load()));
+        stage.setTitle("Inheritance View");
+        stage.show();
+        stage.centerOnScreen();
+    }
 }
