@@ -59,4 +59,12 @@ public class MainViewController {
         stage.show();
         stage.centerOnScreen();
     }
+
+    public void btnTransiantOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(new FXMLLoader(getClass().getResource("/view/TransiantView.fxml")).load()));
+        stage.setTitle("Transiant view");
+        stage.show();
+        stage.centerOnScreen();
+    }
 }
