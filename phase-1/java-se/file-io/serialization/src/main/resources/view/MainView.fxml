@@ -19,6 +19,7 @@
             <Button fx:id="btnManageStudent" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnManageStudentOnAction" prefHeight="30.0" text="Manage Student" VBox.vgrow="ALWAYS" />
             <Button fx:id="btnStudentListing" layoutX="10.0" layoutY="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnStudentListingOnAction" prefHeight="30.0" text="Manage Student by Listing" />
             <Button fx:id="btnSerializationWithInheritance" layoutX="10.0" layoutY="90.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSerializationWithInheritanceOnAction" prefHeight="30.0" text="Serilalization With Inheritance" />
+            <Button fx:id="btnSerializationWithInheritance2" layoutX="10.0" layoutY="130.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSerializationWithInheritance2OnAction" prefHeight="30.0" text="Serilalization With Inheritance2" />
          </children>
       </VBox>
    </children>

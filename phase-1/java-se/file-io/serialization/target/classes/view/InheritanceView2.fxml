@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="203.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.serialization.controller.InheritanceView2Controller">
+    <children>
+        <HBox alignment="CENTER" layoutX="63.0" layoutY="69.0" prefHeight="100.0" prefWidth="474.0" spacing="10.0" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
+            <children>
+                <Button fx:id="btnSerialize" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSerializeOnAction" prefHeight="36.0" prefWidth="198.0" text="Serialize" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnDeserialize" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeserializeOnAction" prefHeight="36.0" prefWidth="198.0" text="Deserialize" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Label layoutX="147.0" layoutY="43.0" text="Serialization with inheritance 2">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
