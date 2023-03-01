@@ -67,4 +67,12 @@ public class MainViewController {
         stage.show();
         stage.centerOnScreen();
     }
+
+    public void btnSerialVersionUidOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(new FXMLLoader(getClass().getResource("/view/SerilaVersionUidView.fxml")).load()));
+        stage.setTitle("serial version uid");
+        stage.show();
+        stage.centerOnScreen();
+    }
 }

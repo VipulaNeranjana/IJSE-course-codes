@@ -91,6 +91,16 @@ public class TransiantViewController {
                 Button btn = new Button("Delete");
                 btn.setOnAction(actionEvent -> {
                     tblDetails.getItems().remove(employee);
+
+                    try {
+                        FileOutputStream fileOutputStream = new FileOutputStream(employeeDB);
+                        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                        employeeList.remove(employee);
+                        objectOutputStream.writeObject(employeeList);
+                        objectOutputStream.close();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
                 });
                 employee.setBtnDelete(btn);
             }
@@ -149,6 +159,20 @@ public class TransiantViewController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        Employee employee = tblDetails.getSelectionModel().getSelectedItem();
+        if(employee == null) return;
+        tblDetails.getItems().remove(employee);
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(employeeDB);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            employeeList.remove(employee);
+            objectOutputStream.writeObject(employeeList);
+            objectOutputStream.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        tblDetails.getSelectionModel().clearSelection();
 
     }
 
@@ -207,6 +231,16 @@ public class TransiantViewController {
         button.setOnAction(actionEvent -> {
             System.out.println("im in");
             tblDetails.getItems().remove(employee);
+
+            try {
+                FileOutputStream fileOutputStream = new FileOutputStream(employeeDB);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                employeeList.remove(employee);
+                objectOutputStream.writeObject(employeeList);
+                objectOutputStream.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         });
 
         try {
