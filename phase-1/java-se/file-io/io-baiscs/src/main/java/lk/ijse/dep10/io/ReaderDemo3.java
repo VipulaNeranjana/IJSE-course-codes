@@ -28,5 +28,6 @@ public class ReaderDemo3 {
         fr.close();
 
         System.out.println(new String(newChar,0,read));
+
     }
 }
