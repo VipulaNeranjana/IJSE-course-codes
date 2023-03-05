@@ -4,7 +4,9 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/chat-client-app/pom.xml" />
+        <option value="$PROJECT_DIR$/chat-server-app/pom.xml" />
+        <option value="$PROJECT_DIR$/chat-shared-app/pom.xml" />
       </list>
     </option>
   </component>
