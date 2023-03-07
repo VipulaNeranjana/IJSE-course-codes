@@ -21,12 +21,12 @@ public class Conversion5 {
         LocalDateTime localDateTime = new Timestamp(utilDate.getTime()).toLocalDateTime();
 
         /*java.time.localDate -> java.util.date*/
-        Date d1 = Date.from(java.sql.Date.valueOf(localDate).toInstant());
+        Date d1 = new Date(java.sql.Date.valueOf(localDate).getTime());
 
         /*java.time.localTime -> java.util.Time*/
-        Date d2 = Date.from(Time.valueOf(localTime).toInstant());
-        
-        /*java.time.LocalTimeDate -> java.util.TimeStamp*/
+        Date d2 = new Date(Time.valueOf(localTime).getTime());
+
+        /*java.time.LocalDateTime -> java.util.TimeStamp*/
         Date d3 = Date.from(Timestamp.valueOf(localDateTime).toInstant());
     }
 }
