@@ -7,6 +7,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 
+import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.LocalDate;
 
@@ -101,8 +102,9 @@ public class MainSceneController {
         int rate = new int[]{5,7,10,15}[selectedIndex];
 
 
-        long total = days * rate;
-        lblTotal.setText(String.format("Total : %.2f", (double)total));
+//        long total = days * rate;
+        BigDecimal total = new BigDecimal(rate).multiply(new BigDecimal((days)));
+        lblTotal.setText(String.format("Total : %.2f", total));
     }
 
 }
