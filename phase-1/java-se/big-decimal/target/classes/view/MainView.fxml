@@ -51,9 +51,9 @@
                   <Insets left="110.0" />
                </VBox.margin>
             </Button>
-            <Label fx:id="lblTotalProfit" text="Estimated total profit">
+            <Label fx:id="lblTotalProfit" alignment="CENTER" prefHeight="16.0" prefWidth="789.0" text="Estimated total profit">
                <padding>
-                  <Insets left="610.0" />
+                  <Insets left="590.0" />
                </padding>
             </Label>
             <TableView fx:id="tblItems" prefHeight="200.0" prefWidth="572.0">

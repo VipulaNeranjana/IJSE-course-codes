@@ -16,5 +16,10 @@ public class BigDecimalDemo {
 
         BigDecimal result1 = bd1.subtract(bd2);
         System.out.println(result1);
+
+        BigDecimal bigDecimal = BigDecimal.valueOf(d1);
+        BigDecimal bigDecimal1 = BigDecimal.valueOf(d2);
+        BigDecimal subtract = bigDecimal.subtract(bigDecimal1);
+        System.out.println(subtract.setScale(2));
     }
 }

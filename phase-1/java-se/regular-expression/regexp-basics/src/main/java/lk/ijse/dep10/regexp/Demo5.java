@@ -10,32 +10,33 @@ public class Demo5 {
         Pattern pattern = Pattern.compile("\\d{3}-\\d{7}");
         Matcher matcher = pattern.matcher(text);
 
-        boolean found = matcher.find();
-        System.out.println(found);
+        boolean found ;
 
-        int start = matcher.start();
-        int end = matcher.end();
-        System.out.printf("start = %s , end = %s \n",start,end);
-        System.out.println(text.substring(start,end));
+        int start ;
+        int end ;
+//        System.out.printf("start = %s , end = %s \n",start,end);
+//        System.out.println(text.substring(start,end));
+//
+//        found = matcher.find();
+//        System.out.println(found);
+//
+//        start = matcher.start();
+//        end = matcher.end();
+//        System.out.printf("start = %s , end = %s \n",start,end);
+//        System.out.println(text.substring(start,end));
+//
+//        found = matcher.find();
+//        System.out.println(found);
 
-        found = matcher.find();
-        System.out.println(found);
+        while (matcher.find()) {
+            start = matcher.start();
+            end = matcher.end();
+            System.out.printf("start = %s , end = %s \n",start,end);
+            System.out.println(text.substring(start,end));
+        }
 
-        start = matcher.start();
-        end = matcher.end();
-        System.out.printf("start = %s , end = %s \n",start,end);
-        System.out.println(text.substring(start,end));
-
-        found = matcher.find();
-        System.out.println(found);
-
-        start = matcher.start();
-        end = matcher.end();
-        System.out.printf("start = %s , end = %s \n",start,end);
-        System.out.println(text.substring(start,end));
-
-        found = matcher.find();
-        System.out.println(found);
+        String replaceText = matcher.replaceAll("abc");
+        System.out.println(replaceText);
 
     }
 }
