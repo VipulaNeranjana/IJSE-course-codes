@@ -17,6 +17,7 @@ public class Demo3 {
 
     private static boolean isValidDob(String dob){
         return dob.matches("(19\\d{2}|2\\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[1-2]\\d|3[0-1])");
+
 //        char[] dobChar = dob.toCharArray();
 //        if(dob.length() != 10 || dobChar[4] != '-' || dobChar[7] != '-') return false;
 //
